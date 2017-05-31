@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Approach2 {
+public class Solution2 {
 
     public int[] twoSum(int[] nums, int target) {
 
