@@ -12,6 +12,6 @@
 >     return [0, 1].
 
 ### **Quick Navigation**
- - ####[Soluton](##solution)
+ - #### [Soluton](##solution)
 
-##**Solution**
+## **Solution**
