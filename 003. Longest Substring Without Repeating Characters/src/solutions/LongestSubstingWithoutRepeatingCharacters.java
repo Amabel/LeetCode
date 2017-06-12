@@ -44,7 +44,6 @@ public class LongestSubstingWithoutRepeatingCharacters {
 	// approach 2
 	// 2个指针，遍历一次字符串
 	public int solution_2(String s) {
-		
 		if (s == null) {
 			throw new IllegalArgumentException("string is null!");
 		}
@@ -63,10 +62,4 @@ public class LongestSubstingWithoutRepeatingCharacters {
 		}
 		return maxLen;
 	}
-
-
-
-
-
-
 }
