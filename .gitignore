@@ -6,3 +6,7 @@
 
 # exe
 *.exe
+
+# eclipse
+.classpath
+.project
