@@ -42,7 +42,7 @@ public class LongestSubstingWithoutRepeatingCharacters {
     }
 
 	// approach 2
-	// 2个指针，遍历一次字符串
+	// 2个指针，最多遍历两次字符串
 	public int solution_2(String s) {
 		if (s == null) {
 			throw new IllegalArgumentException("string is null!");
@@ -60,6 +60,19 @@ public class LongestSubstingWithoutRepeatingCharacters {
 			exist[s.charAt(j)] = true;
 			maxLen = Math.max(j -i + 1, maxLen);
 		}
+		return maxLen;
+	}
+
+	// approach 3
+	// 2个指针，遍历一次字符串
+	public int solution_3(String s) {
+		if (s == null) {
+			throw new IllegalArgumentException("string is null!");
+		}
+		int[] charMap = new int[256];
+		int i = 0;
+		int maxLen= 0;
+
 		return maxLen;
 	}
 
