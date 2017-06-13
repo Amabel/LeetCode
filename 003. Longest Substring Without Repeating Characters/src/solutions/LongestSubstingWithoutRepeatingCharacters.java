@@ -47,7 +47,7 @@ public class LongestSubstingWithoutRepeatingCharacters {
 		if (s == null) {
 			throw new IllegalArgumentException("string is null!");
 		}
-		
+
 		boolean[] exist = new boolean[256];
 		int i= 0;
 		int maxLen = 0;
@@ -55,11 +55,12 @@ public class LongestSubstingWithoutRepeatingCharacters {
 		for (int j=0; j<s.length(); j++) {
 			if (exist[s.charAt(j)]) {
 				exist[s.charAt(j)] = false;
-				i = j;
+				i ++;
 			}
 			exist[s.charAt(j)] = true;
 			maxLen = Math.max(j -i + 1, maxLen);
 		}
 		return maxLen;
 	}
+
 }

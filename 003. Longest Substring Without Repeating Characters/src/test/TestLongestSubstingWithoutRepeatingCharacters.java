@@ -29,6 +29,9 @@ public class TestLongestSubstingWithoutRepeatingCharacters {
 	String str5 = "dfjiomn$)'% &";
 	int ans5 = 13;
 	
+	String str6 = "abcad";
+	int ans6 = 4;
+	
 	@Before
 	public void setUp() throws Exception {
 		ls = new LongestSubstingWithoutRepeatingCharacters();
@@ -37,22 +40,24 @@ public class TestLongestSubstingWithoutRepeatingCharacters {
 	@Test (expected = IllegalArgumentException.class)
 	public void testSolution_1() {
 		
-		ls.solution_1(str1);
 		assertEquals(ans2, ls.solution_1(str2));
 		assertEquals(ans3, ls.solution_1(str3));
 		assertEquals(ans4, ls.solution_1(str4));
 		assertEquals(ans5, ls.solution_1(str5));
+		assertEquals(ans6, ls.solution_1(str6));
+		ls.solution_1(str1);
 
 	}
 	
 	@Test (expected = IllegalArgumentException.class)
 	public void testSolution_2() {
 		
-		ls.solution_2(str1);
 		assertEquals(ans2, ls.solution_2(str2));
 		assertEquals(ans3, ls.solution_2(str3));
 		assertEquals(ans4, ls.solution_2(str4));
 		assertEquals(ans5, ls.solution_2(str5));
+		assertEquals(ans6, ls.solution_2(str6));
+		ls.solution_2(str1);
 
 	}
 
