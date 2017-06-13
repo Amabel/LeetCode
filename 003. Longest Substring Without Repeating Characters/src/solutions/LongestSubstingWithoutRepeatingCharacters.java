@@ -47,12 +47,13 @@ public class LongestSubstingWithoutRepeatingCharacters {
 		if (s == null) {
 			throw new IllegalArgumentException("string is null!");
 		}
-
+		// 使用一个长度为 256 的 boolean 数组来记录字符的出现情况
 		boolean[] exist = new boolean[256];
 		int i= 0;
 		int maxLen = 0;
-
 		for (int j=0; j<s.length(); j++) {
+			// 如果该字符已经出现，则要把 i 向右移 1 位
+			// 注意此处不可以把 i 直接指向 j 右边的位置
 			if (exist[s.charAt(j)]) {
 				exist[s.charAt(j)] = false;
 				i ++;
@@ -69,10 +70,20 @@ public class LongestSubstingWithoutRepeatingCharacters {
 		if (s == null) {
 			throw new IllegalArgumentException("string is null!");
 		}
+		// 使用 int 数组来记录每个字符出现的位置
 		int[] charMap = new int[256];
+		Arrays.fill(charMap, -1);
 		int i = 0;
 		int maxLen= 0;
-
+		// 每次更新字符出现的位置，若该字符已经出现过
+		// 就将 i 移动到上一次该字符出现的位置 + 1
+		for (int j=0; j<s.length(); j++) {
+			if (charMap[s.charAt(j)] >= i) {
+				i = charMap[s.charAt(j)] + 1;
+			}
+			charMap[s.charAt(j)] = j;
+			maxLen = Math.max(j - i + 1, maxLen);
+		}
 		return maxLen;
 	}
 
