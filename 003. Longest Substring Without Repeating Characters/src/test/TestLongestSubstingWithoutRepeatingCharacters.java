@@ -72,5 +72,31 @@ public class TestLongestSubstingWithoutRepeatingCharacters {
 		ls.solution_3(str1);
 
 	}
+	
+	@Test (expected = IllegalArgumentException.class)
+	public void testSolution_4() {
+		
+		assertEquals(ans2, ls.solution_4(str2));
+		assertEquals(ans3, ls.solution_4(str3));
+		assertEquals(ans4, ls.solution_4(str4));
+		assertEquals(ans5, ls.solution_4(str5));
+		assertEquals(ans6, ls.solution_4(str6));
+		ls.solution_4(str1);
+
+	}
+	
+	@Test (expected = IllegalArgumentException.class)
+	public void testSolution_5() {
+		
+		assertEquals(ans2, ls.solution_5(str2));
+		assertEquals(ans3, ls.solution_5(str3));
+		assertEquals(ans4, ls.solution_5(str4));
+		assertEquals(ans5, ls.solution_5(str5));
+		assertEquals(ans6, ls.solution_5(str6));
+		ls.solution_5(str1);
+
+	}
+	
+	
 
 }
