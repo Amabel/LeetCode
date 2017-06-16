@@ -8,5 +8,3 @@
 >
 > Output: 7 -> 0 -> 8
 >
-
-## **Solution**
