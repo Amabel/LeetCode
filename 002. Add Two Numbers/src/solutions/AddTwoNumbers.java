@@ -3,14 +3,7 @@ package solutions;
 public class AddTwoNumbers {
 
     public static void main(String[] args) {
-//        ListNode l1 = new ListNode(2);
 //        l1.next = new ListNode(4);
-//        l1.next.next = new ListNode(3);
-//        ListNode l2 = new ListNode(5);
-//        l2.next = new ListNode(6);
-//        l2.next.next = new ListNode(4);
-//        ListNode res = new Solution().addTwoNumbers(l1, l2);
-//        System.out.println(res.val + "" + res.next.val + "" + res.next.next.val);
     	
     	AddTwoNumbers atn = new AddTwoNumbers();
     	
@@ -18,9 +11,11 @@ public class AddTwoNumbers {
     	int[] a2_1 = {5, 6, 4};
     	ListNode l1_1 = createListNode(a1_1);
     	ListNode l2_1 = createListNode(a2_1);
-//    	int[] ans_1 = {7, 0, 8};
+    	int[] ans_1 = {7, 0, 8};
     	ListNode ans_l_1 = atn.solution(l1_1, l2_1);
-    	dumpListNode(ans_l_1);
+    	ListNode ans_l1_1 = createListNode(ans_1);
+    	
+    	System.out.println("equals: " + equalsListNode(ans_l1_1, ans_l_1));
     	
 //    	int[] a1_2 = {1, 1};
 //    	int[] a2_2 = {0, 1, 2};
@@ -72,15 +67,34 @@ public class AddTwoNumbers {
 		return dummy.next;
 	}
 	
-	public static void dumpListNode(ListNode l) {
-		if (null == l) {
-			return;
+//	public static void dumpListNode(ListNode l) {
+//		if (null == l) {
+//			return;
+//		}
+//		do {
+//			System.out.print(l.val);
+//		} while (null != l.next);
+//		
+//		System.out.println();
+//		
+//	}
+	
+	public static boolean equalsListNode(ListNode l1, ListNode l2) {
+		ListNode ln1 = l1;
+		ListNode ln2 = l2;
+		
+		while (null != ln1.next && null != ln2.next) {
+			if (ln1.val != ln2.val) {
+				return false;
+			}
+			ln1 = ln1.next;
+			ln2 = ln2.next;
 		}
-		do {
-			System.out.print(l.val);
-		} while (null != l.next);
 		
-		System.out.println();
+		if (null == ln1.next && null == ln2.next) {
+			return true;
+		}
 		
+		return false;
 	}
 }
