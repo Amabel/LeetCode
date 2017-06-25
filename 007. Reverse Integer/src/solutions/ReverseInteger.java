@@ -22,4 +22,11 @@ public class ReverseInteger {
 
 		return ret;
 	}
+	
+	public int solution_2(int x) {
+		int ret = 0;
+		
+		
+		return ret;
+	}
 }
