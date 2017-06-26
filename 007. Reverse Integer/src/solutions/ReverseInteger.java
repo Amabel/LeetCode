@@ -22,11 +22,23 @@ public class ReverseInteger {
 
 		return ret;
 	}
-	
+
 	public int solution_2(int x) {
 		int ret = 0;
-		
-		
+
+		while (0 != x) {
+
+			int tail = x % 10;
+			int result = ret * 10 + tail;
+			// overflow
+			// roll the result back to see if overflow happened
+			if (ret != (result - tail) / 10) {
+				return 0;
+			}
+			x = x / 10;
+			ret = result;
+		}
+
 		return ret;
 	}
 }
