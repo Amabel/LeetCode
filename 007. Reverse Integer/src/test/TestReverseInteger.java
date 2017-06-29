@@ -6,8 +6,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 import solutions.ReverseInteger;
-import sun.awt.motif.X11CNS11643;
-import sun.security.x509.X500Name;
 
 /**
  * @author  Weibin Luo
