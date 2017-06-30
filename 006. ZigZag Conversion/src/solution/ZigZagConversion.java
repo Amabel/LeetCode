@@ -8,10 +8,10 @@ public class ZigZagConversion {
 	public static void main(String[] args) {
 
 		String str = "ABCD";
-		System.out.println(new ZigZagConversion().convert_2("PAYPALISHIRING", 3));
+		System.out.println(new ZigZagConversion().solution_2("PAYPALISHIRING", 3));
 	}
 
-	public String convert_1(String s, int numRows) {
+	public String solution_1(String s, int numRows) {
 		String ret = "";
 
 		char[] ch = s.toCharArray();
@@ -32,7 +32,7 @@ public class ZigZagConversion {
 		return ret;
 	}
 
-	public String convert_2(String s, int numRows) {
+	public String solution_2(String s, int numRows) {
 		if (null == s || numRows < 1) {
 			throw new IllegalArgumentException("s is null or numRows < 1");
 		}
