@@ -30,6 +30,19 @@ public class TestZigZagConversion {
 	public void setUp() throws Exception {
 		zzc = new ZigZagConversion();
 	}
+	
+	@Test (expected = IllegalArgumentException.class)
+	public void testSolution_1() {
+		
+		assertEquals(a1, zzc.solution_1(t1.str, t1.lines));
+		assertEquals(a2, zzc.solution_1(t2.str, t2.lines));
+		assertEquals(a3, zzc.solution_1(t3.str, t3.lines));
+		assertEquals(a4, zzc.solution_1(t4.str, t4.lines));
+		assertEquals(a5, zzc.solution_1(t5.str, t5.lines));
+		zzc.solution_1(t6.str, t6.lines);
+		zzc.solution_1(t7.str, t7.lines);
+
+	}
 
 	@Test (expected = IllegalArgumentException.class)
 	public void testSolution_2() {
@@ -43,6 +56,8 @@ public class TestZigZagConversion {
 		zzc.solution_2(t7.str, t7.lines);
 
 	}
+	
+	
 
 	class TestCase {
 		String str;

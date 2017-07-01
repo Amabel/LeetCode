@@ -1,6 +1,5 @@
 package solution;
 
-import java.util.*;
 /**
  * @author  Weibin Luo
  * @version Created on 2017/06/26 15:23:55
@@ -9,7 +8,6 @@ public class ZigZagConversion {
 
 	public static void main(String[] args) {
 
-		String str = "ABCD";
 		System.out.println(new ZigZagConversion().solution_2("PAYPALISHIRING", 3));
 	}
 
@@ -21,7 +19,6 @@ public class ZigZagConversion {
 			return s;
 		}
 
-		String ret = "";
 		String[] rets = new String[numRows];
 
 		// init
@@ -30,11 +27,21 @@ public class ZigZagConversion {
 		}
 
 		int i = 0;
+		int len = s.length();
 		while (i < len) {
-			for (int idx = 0)
+			// idx for row index
+			// down
+			for (int idx=0; idx<numRows && i<len; idx++) {
+				rets[idx] += s.charAt(i);
+				i = i + 1;
+			}
+			// up
+			for (int idx=numRows-2; idx>0 && i<len; idx--) {
+				rets[idx] += s.charAt(i);
+				i = i + 1;
+			}
 		}
-
-		return ret;
+		return String.join("", rets);
 	}
 
 	public String solution_2(String s, int numRows) {
