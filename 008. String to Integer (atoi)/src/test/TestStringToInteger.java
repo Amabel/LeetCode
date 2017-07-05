@@ -5,9 +5,6 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.sun.xml.internal.ws.api.ha.StickyFeature;
-import com.sun.xml.internal.ws.api.server.AbstractServerAsyncTransport;
-
 import solution.StringToInteger;
 
 public class TestStringToInteger {
