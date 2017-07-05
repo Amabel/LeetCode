@@ -9,8 +9,12 @@ public class StringToInteger {
     }
 
     public int solution_1(String str) {
-        // empty or null string
-        if (0 == str.length() || null == str) {
+        // null string
+        if (null == str) {
+            return 0;
+        }
+        // empty string
+        if (0 == str.length()) {
             return 0;
         }
 
@@ -21,6 +25,9 @@ public class StringToInteger {
         // leading spaces
         while (' ' == str.charAt(index) && index < str.length()) {
             index ++;
+            if (str.length() == index) {
+            	return 0;
+            }
         }
 
         // sign
