@@ -3,7 +3,7 @@ public class ContainerWithMostWater {
 
 	public static void main(String[] args) {
 		
-		int[] height = {1,1};
+		int[] height = {1,0,0,0,0,0,3,0,0,10};
 		
 		System.out.println(ContainerWithMostWater.solution(height));
 
